@@ -59,16 +59,11 @@ svg {
   margin: 0 80px 0 auto;
   border-radius: 14px;
   background: linear-gradient(135deg, transparent 32px, #fff 0);
-
-  
-  
 }
 
 .product:last-child {
   margin-right: 0;
 }
-
-
 
 .product-inner {
   height: 100%;
@@ -239,18 +234,19 @@ svg {
   font-weight: 100;
 }
 
-@media (max-width: 1279px)  {
+@media (max-width: 1279px) {
   .container {
-    margin: 0;
+    margin: 0 50px;
   }
-  
-  
+
+  .products {
+    flex: 1;
+  }
 }
 
-@media (max-width: 1119px)  {
-  .product{
-    margin: auto;
-    margin-bottom: 60px;
+@media (max-width: 1219px) {
+  .product {
+    margin: 0 80px 60px;
   }
 
   .product:nth-child(even) {
@@ -258,25 +254,53 @@ svg {
   }
 
   .product:last-child {
-    margin-right: auto;
+    margin: 0 auto;
   }
 
   .products {
     flex: 1;
   }
 
-
-  
-  
-}
-
-@media (max-width: 1119px)  {
-
-
   .product:nth-child(even) {
     margin-left: auto;
   }
-
-
-  
 }
+
+@media (max-width: 979px) {
+  .product {
+    margin: 0 auto 60px;
+  }
+  .product:nth-child(even) {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 769px) {
+  .container {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 769px) {
+  .product {
+    margin: 0 auto 60px;
+  }
+
+ 
+}
+
+@media (max-width: 709px) {
+  .product {
+    margin: 0 auto 60px;
+  }
+
+  .products {
+    flex-flow: column;
+  }
+
+ 
+  .product:nth-child(even) {
+    margin-left: auto;
+  }
+}
+
