@@ -1,0 +1,282 @@
+h1,
+h2,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  background: url(./background/Pattern.png);
+  margin: 0;
+  font-family: "Trebuchet MS";
+  font-style: normal;
+}
+
+svg {
+  z-index: 10;
+  position: relative;
+  width: 100%;
+}
+.App {
+  margin: 0;
+}
+.header {
+  width: 100%;
+  margin: auto 0 0;
+}
+.header h1 {
+  margin: 0 auto 24px;
+  font-family: "Exo2-light", sans-serif;
+  font-size: 36px;
+  font-weight: 100;
+
+  text-align: center;
+
+  color: #ffffff;
+
+  text-shadow: 0px 1px 1px #000000;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto 80px;
+  height: 100vh;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto auto;
+  padding-bottom: 29px;
+}
+.product,
+.disable {
+  position: relative;
+  width: 320px;
+  height: 480px;
+  margin: 0 80px 0 auto;
+  border-radius: 14px;
+  background: linear-gradient(135deg, transparent 32px, #fff 0);
+
+  
+  
+}
+
+.product:last-child {
+  margin-right: 0;
+}
+
+
+
+.product-inner {
+  height: 100%;
+  cursor: pointer;
+}
+
+.disable {
+  background: linear-gradient(135deg, transparent 32px, #ffffff7d 0);
+  position: absolute;
+
+  top: -1px;
+  z-index: 20;
+}
+
+.cat-img {
+  position: absolute;
+  left: 0;
+  z-index: 0;
+}
+
+.ball {
+  width: 80px;
+  height: 80px;
+  background: #1698d9;
+  display: block;
+  border-radius: 40px;
+  position: relative;
+  bottom: 98px;
+  left: 224px;
+}
+
+.label {
+  position: relative;
+  bottom: 545px;
+  left: 50px;
+  width: 266px;
+}
+
+.firm {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 5px;
+  color: #666666;
+}
+
+.title {
+  font-size: 48px;
+  line-height: 56px;
+}
+
+.title-description {
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 15px;
+}
+
+.portions,
+.description {
+  font-size: 14px;
+  line-height: 16px;
+  color: #666666;
+}
+.weight {
+  color: #ffffff;
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.weight p:first-child {
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 22px;
+  margin-bottom: 8px;
+}
+
+.weight p:last-child {
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 22px;
+}
+
+.buy,
+.composition {
+  position: relative;
+  bottom: -12px;
+  margin: 0;
+  font-weight: 400;
+
+  font-size: 13px;
+  line-height: 15px;
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.composition {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.buy a {
+  color: #22a7e9;
+}
+
+.selected {
+  background-color: none;
+}
+
+.selected .border {
+  fill: #d91667;
+}
+
+.selected .ball {
+  background-color: #d91667;
+}
+
+.selected .composition {
+  display: block;
+}
+
+.selected .buy {
+  display: none;
+}
+.hover .firm {
+  display: none;
+}
+.hover .question {
+  display: block;
+}
+
+.hover .border {
+  fill: #d91667;
+}
+
+.hover .ball {
+  background-color: #d91667;
+}
+
+.question {
+  display: none;
+  color: #d91667;
+}
+
+.sad {
+  color: yellow;
+}
+
+@font-face {
+  font-family: "Trebuchet MS";
+
+  src: url("./fonts/trebuc.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Exo2-light";
+
+  src: url("./fonts/Exo2-ExtraLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100;
+}
+
+@media (max-width: 1279px)  {
+  .container {
+    margin: 0;
+  }
+  
+  
+}
+
+@media (max-width: 1119px)  {
+  .product{
+    margin: auto;
+    margin-bottom: 60px;
+  }
+
+  .product:nth-child(even) {
+    margin-left: 160px;
+  }
+
+  .product:last-child {
+    margin-right: auto;
+  }
+
+  .products {
+    flex: 1;
+  }
+
+
+  
+  
+}
+
+@media (max-width: 1119px)  {
+
+
+  .product:nth-child(even) {
+    margin-left: auto;
+  }
+
+
+  
+}
