@@ -268,7 +268,7 @@ svg {
 
 @media (max-width: 1219px) {
   .product {
-    margin: 0 80px 60px;
+    margin: 0 70px 60px;
   }
 
   .product:nth-child(even) {
@@ -297,7 +297,7 @@ svg {
   }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 785px) {
   .container {
     margin: 0 20px;
   }
@@ -311,7 +311,7 @@ svg {
  
 }
 
-@media (max-width: 709px) {
+@media (max-width: 726px) {
   .product {
     margin: 0 auto 60px;
   }
