@@ -14,9 +14,11 @@ body {
 }
 
 svg {
-  z-index: 10;
-  position: relative;
+ 
+  position: absolute;
+  top: 0;
   width: 100%;
+  cursor: pointer;
 }
 .App {
   margin: 0;
@@ -61,6 +63,8 @@ svg {
   background: linear-gradient(135deg, transparent 32px, #fff 0);
 }
 
+
+
 .product:last-child {
   margin-right: 0;
 }
@@ -68,20 +72,31 @@ svg {
 .product-inner {
   height: 100%;
   cursor: pointer;
+  
+  position: relative;
 }
 
+
+
+.product-inner:hover .ball {
+  background: #2EA8E6;
+}
+
+.product-inner:hover .border {
+  fill: #2EA8E6;
+}
 .disable {
   background: linear-gradient(135deg, transparent 32px, #ffffff7d 0);
   position: absolute;
 
   top: -1px;
-  z-index: 20;
+  
 }
 
 .cat-img {
   position: absolute;
   left: 0;
-  z-index: 0;
+  
 }
 
 .ball {
@@ -91,13 +106,13 @@ svg {
   display: block;
   border-radius: 40px;
   position: relative;
-  bottom: 98px;
+  bottom: -385px;
   left: 224px;
 }
 
 .label {
   position: relative;
-  bottom: 545px;
+  bottom: 50px;
   left: 50px;
   width: 266px;
 }
@@ -171,21 +186,28 @@ svg {
   display: none;
 }
 
-.buy a {
-  color: #22a7e9;
+.buy span {
+  color: #1698D9;
+  cursor: pointer;
+  border-bottom: 1px dashed #1698D9;
+  
 }
 
 .selected {
   background-color: none;
 }
 
-.selected .border {
+.selected .border, .selected .product-inner:hover .border {
   fill: #d91667;
 }
 
-.selected .ball {
+.selected .ball, .selected .product-inner:hover .ball {
   background-color: #d91667;
 }
+
+
+
+
 
 .selected .composition {
   display: block;
@@ -194,18 +216,18 @@ svg {
 .selected .buy {
   display: none;
 }
-.hover .firm {
+.question-hover .firm {
   display: none;
 }
-.hover .question {
+.question-hover .question {
   display: block;
 }
 
-.hover .border {
+.question-hover .border {
   fill: #d91667;
 }
 
-.hover .ball {
+.question-hover .ball {
   background-color: #d91667;
 }
 

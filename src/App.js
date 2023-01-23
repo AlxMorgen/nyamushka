@@ -1,7 +1,7 @@
 import "./App.css";
-import Header from "./components/UI/Header";
+import Header from "./components/Header";
 
-import ProductsBlock from "./components/UI/ProductsBlock";
+import ProductsBlock from "./components/ProductsBlock";
 
 function App() {
   return (
