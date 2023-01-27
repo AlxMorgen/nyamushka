@@ -89,6 +89,15 @@ header h1 {
 .product-inner:hover .border {
   fill: #2ea8e6;
 }
+
+.product-inner.disable:hover .ball {
+  background: #1698d9;
+}
+
+.product-inner.disable:hover .border {
+  fill: #1698d9;
+}
+
 .disable {
   background: linear-gradient(135deg, transparent 32px, #ffffff7d 0);
   position: absolute;
