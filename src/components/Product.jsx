@@ -4,11 +4,23 @@ import { useState } from 'react'
 import Label from './Label'
 import Border from './Border'
 import { handlerClick, handlerLeave, handlerHover } from './Handlers'
+import checkValue from './checkValue'
 
-const Product = (props) => {
+const Product = ({ productData }) => {
   const [isSelected, setIsSelected] = useState(false)
   const [isQuestion, setIsQuestion] = useState(false)
-  const { weigth, stock, product, description } = props
+  const { weigth, stock, product, description, portions, giftCount } =
+    productData
+
+  const currentGift = checkValue(
+    giftCount,
+    'мышь в подарок',
+    ' мыши в подарок',
+    ' мышей в подарок',
+  )
+
+  const currentPortion = checkValue(portions, 'порция', ' порции', ' порций')
+
   return (
     <div
       className={`${!isSelected ? 'product' : 'product selected'} ${
@@ -34,7 +46,7 @@ const Product = (props) => {
             <p>кг</p>
           </div>
         </span>
-        <Label label={props} />
+        <Label product={product} portions={currentPortion} gift={currentGift} />
         <Border />
       </div>
       <div className={stock > 0 ? 'buy' : 'buy hidden'}>
