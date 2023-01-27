@@ -1,38 +1,35 @@
-import React from "react";
-import cat from "../img/cat.png";
-import { useState } from "react";
-import Label from "./Label";
-import handlerLeave from "./handlerLeave";
-import Border from "./Border";
-import handlerClick from "./handlerClick";
-import handlerhover from "./handlerHover";
+import React from 'react'
+import cat from '../img/cat.png'
+import { useState } from 'react'
+import Label from './Label'
+import Border from './Border'
+import { handlerClick, handlerLeave, handlerHover } from './Handlers'
 
 const Product = (props) => {
-  const [isSelected, setIsSelected] = useState(false);
-  const [isQuestion, setIsQuestion] = useState(false);
-  const { weigth, stock, product, description } = props;
-
+  const [isSelected, setIsSelected] = useState(false)
+  const [isQuestion, setIsQuestion] = useState(false)
+  const { weigth, stock, product, description } = props
   return (
     <div
-      className={`${!isSelected ? "product" : "product selected"} ${
-        !isQuestion ? "" : "question-hover"
-      }`}
+      className={`${!isSelected ? 'product' : 'product selected'} ${
+        !isQuestion ? '' : 'question-hover'
+      } `}
     >
       <div
-        className="product-inner"
+        className={stock > 0 ? 'product-inner' : 'product-inner disable'}
         onMouseLeave={() => {
-          handlerLeave(isSelected, setIsQuestion);
+          handlerLeave(isSelected, setIsQuestion)
         }}
         onMouseEnter={() => {
-          handlerhover(isSelected, isQuestion, setIsQuestion);
+          handlerHover(isSelected, isQuestion, setIsQuestion)
         }}
-        onClick={() => {
-          handlerClick(isSelected, setIsSelected, setIsQuestion);
+        onClick={(event) => {
+          handlerClick(isSelected, setIsSelected, setIsQuestion, event)
         }}
       >
-        <img className="cat-img" src={cat} alt="cat" />
-        <span className="ball">
-          <div className="weight">
+        <img className='cat-img' src={cat} alt='cat' />
+        <span className='ball'>
+          <div className='weight'>
             <p>{weigth}</p>
             <p>кг</p>
           </div>
@@ -40,25 +37,24 @@ const Product = (props) => {
         <Label label={props} />
         <Border />
       </div>
-      <div className={stock > 0 ? "buy" : "buy hidden"}>
+      <div className={stock > 0 ? 'buy' : 'buy hidden'}>
         <p>
-          Чего сидишь? Порадуй котэ,{" "}
+          Чего сидишь? Порадуй котэ, &nbsp;
           <span
-            className={"buy-link"}
+            className={'buy-link'}
             onClick={() => setIsSelected(!isSelected)}
           >
-            {" "}
-            купи.
+            &nbsp;купи.
           </span>
         </p>
       </div>
-      <p className="composition">{description}</p>
-      <div className={stock > 0 ? "disable hidden" : "disable"}></div>
-      <div className={stock === 0 ? "buy sad" : "buy sad hidden"}>
+      <p className='composition'>{description}</p>
+
+      <div className={stock === 0 ? 'buy sad' : 'buy sad hidden'}>
         Печалька, {product} закончился.
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Product;
+export default Product

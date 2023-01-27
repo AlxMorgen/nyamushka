@@ -1,46 +1,35 @@
-import React from "react";
-import checkValue from "./checkValue";
-import Product from "./Product";
-import Data from "./Data";
+import React from 'react'
+import checkValue from './checkValue'
+import { data } from './data'
+import Product from './Product'
 
-const card = Data().map((card, index) => {
-  const {
-    product,
-    firm,
-    title,
-    weigth,
-    description,
-    stock,
-    portions,
-    freeMouse,
-  } = card;
+const cards = data.map((card) => {
+  const { product, weigth, description, stock, portions, freeMouse } = card
   const currentMouses = checkValue(
     freeMouse,
-    "мышь в подарок",
-    " мыши в подарок",
-    " мышей в подарок"
-  );
+    'мышь в подарок',
+    ' мыши в подарок',
+    ' мышей в подарок',
+  )
 
-  const currentPortion = checkValue(portions, "порция", " порции", " порций");
+  const currentPortion = checkValue(portions, 'порция', ' порции', ' порций')
 
   return (
     <Product
       key={product}
-      firm={firm}
-      title={title}
       product={product}
       portions={currentPortion}
       freeMouse={currentMouses}
       weigth={weigth}
       description={description}
       stock={stock}
-      storage={Data().length}
+      storage={data.length}
     />
-  );
-});
+  )
+})
 
 const ProductsBlock = () => {
-  return <div className="products">{card}</div>;
-};
+  return <div className='products'>{cards}</div>
+}
 
-export default ProductsBlock;
+export default ProductsBlock

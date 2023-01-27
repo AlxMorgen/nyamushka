@@ -1,18 +1,18 @@
-import "./App.css";
-import Header from "./components/Header";
+import './App.css'
 
-import ProductsBlock from "./components/ProductsBlock";
+import ProductsBlock from './components/ProductsBlock'
 
 function App() {
   return (
-    <div className="App">
-      <div className="container">
-        <Header/>
-      <ProductsBlock />
+    <div className='App'>
+      <div className='container'>
+        <header>
+          <h1>Ты сегодня покормил кота?</h1>
+        </header>
+        <ProductsBlock />
       </div>
-      
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

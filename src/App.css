@@ -9,12 +9,11 @@ p {
 body {
   background: url(./background/Pattern.png);
   margin: 0;
-  font-family: "Trebuchet MS";
+  font-family: 'Trebuchet MS';
   font-style: normal;
 }
 
 svg {
- 
   position: absolute;
   top: 0;
   width: 100%;
@@ -23,13 +22,13 @@ svg {
 .App {
   margin: 0;
 }
-.header {
+header {
   width: 100%;
   margin: auto 0 0;
 }
-.header h1 {
+header h1 {
   margin: 0 auto 24px;
-  font-family: "Exo2-light", sans-serif;
+  font-family: 'Exo2-light', sans-serif;
   font-size: 36px;
   font-weight: 100;
 
@@ -63,7 +62,14 @@ svg {
   background: linear-gradient(135deg, transparent 32px, #fff 0);
 }
 
+.disable {
+  opacity: 0.5;
+  cursor: auto;
+}
 
+.disable svg {
+  cursor: auto;
+}
 
 .product:last-child {
   margin-right: 0;
@@ -72,31 +78,27 @@ svg {
 .product-inner {
   height: 100%;
   cursor: pointer;
-  
+
   position: relative;
 }
 
-
-
 .product-inner:hover .ball {
-  background: #2EA8E6;
+  background: #2ea8e6;
 }
 
 .product-inner:hover .border {
-  fill: #2EA8E6;
+  fill: #2ea8e6;
 }
 .disable {
   background: linear-gradient(135deg, transparent 32px, #ffffff7d 0);
   position: absolute;
 
   top: -1px;
-  
 }
 
 .cat-img {
   position: absolute;
   left: 0;
-  
 }
 
 .ball {
@@ -187,27 +189,24 @@ svg {
 }
 
 .buy span {
-  color: #1698D9;
+  color: #1698d9;
   cursor: pointer;
-  border-bottom: 1px dashed #1698D9;
-  
+  border-bottom: 1px dashed #1698d9;
 }
 
 .selected {
   background-color: none;
 }
 
-.selected .border, .selected .product-inner:hover .border {
+.selected .border,
+.selected .product-inner:hover .border {
   fill: #d91667;
 }
 
-.selected .ball, .selected .product-inner:hover .ball {
+.selected .ball,
+.selected .product-inner:hover .ball {
   background-color: #d91667;
 }
-
-
-
-
 
 .selected .composition {
   display: block;
@@ -238,20 +237,22 @@ svg {
 
 .sad {
   color: yellow;
+  position: relative;
+  top: 492px;
 }
 
 @font-face {
-  font-family: "Trebuchet MS";
+  font-family: 'Trebuchet MS';
 
-  src: url("./fonts/trebuc.ttf") format("truetype");
+  src: url('./fonts/trebuc.ttf') format('truetype');
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
-  font-family: "Exo2-light";
+  font-family: 'Exo2-light';
 
-  src: url("./fonts/Exo2-ExtraLight.ttf") format("truetype");
+  src: url('./fonts/Exo2-ExtraLight.ttf') format('truetype');
   font-style: normal;
   font-weight: 100;
 }
@@ -307,8 +308,6 @@ svg {
   .product {
     margin: 0 auto 60px;
   }
-
- 
 }
 
 @media (max-width: 726px) {
@@ -320,9 +319,7 @@ svg {
     flex-flow: column;
   }
 
- 
   .product:nth-child(even) {
     margin-left: auto;
   }
 }
-
