@@ -1,3 +1,9 @@
+По макету Figma https://www.figma.com/file/bxfQtIljhEdpupCydaHGin/prototype?node-id=0%3A2&t=6lDNEikR7mv0ens2-0
+
+Build https://alxmorgen.github.io/nyamushka/
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
